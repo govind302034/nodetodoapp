@@ -20,7 +20,7 @@ const Todocollection=db.collection('Todos');
 
 const Usercollection=db.collection('User');
 
-Usercollection.find().count().then((count)=>{
+Usercollection.find({}).count().then((count)=>{
 	console.log(`Total todos: ${count}`);
 },(err)=>{
 	console.log("can't find",err);
